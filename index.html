@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BCC :: Check In!</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://static1.squarespace.com/static/55ac563ae4b0800256ce9b9c/t/562832cbe4b0377cf538ba28/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+        <style>
+            body{
+                background-color:white;
+                font-family: 'PT Sans', sans-serif;
+            }
+            select {
+               -webkit-appearance: none; 
+               background: url(arrow.png) 96% / 8% no-repeat #eee;
+            }
+            #login-div{
+                position:absolute;
+                width:30%;
+                height:60%;
+                left:55%;
+                top:20%;
+                max-width:500px;
+                max-height:500px;
+                background-color:#1F1F1F;
+                border-radius:20px;
+                -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.8);
+            }
+            #checkinbtn{
+                color:#1F1F1F;
+                font-size:20px;
+                background-color:white;
+                border:none;
+                padding:5px;
+                border-radius:20px;
+                position:absolute;
+                bottom:10%;
+                height:45px;
+                width:30%;
+                left:35%;
+                transition:.4s;
+                outline:none;
+            }
+            #checkinbtn:hover{
+                width:40%;
+                left:30%;
+            }
+            #register{
+                color:white;
+                font-size:20px;
+                background-color:#1F1F1F;
+                border:none;
+                padding:5px;
+                border-radius:20px;
+                position:absolute;
+                top:60%;
+                height:45px;
+                width:150px;
+                left:8%;
+                transition:.4s;
+                outline:none;
+            }
+            #register:hover{
+                width:225px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <img style="position:absolute;top:10%;left:5%;width:500px;height:auto;" src="bcc.png"></img>
+            <h1 style="color:#1F1F1F;position:absolute;top:35%;left:8%;font-size:40px;">Welcome, please check in!</h1>
+            <h3 style="color:#1F1F1F;position:absolute;top:45%;left:8%;font-size:30px;">New? Register below!</h3>
+            <button id="register">Register!</button>
+            <div id="login-div">
+                <h1 style="color:white;">Sunday Check In</h1>
+                <select id="name" style="outline:none;color:#1F1F1F;font-size:20px;background-color:#white;border:none;padding:5px;border-radius:20px;position:absolute;top:20%;width:80%;left:10%;height:60px;">
+                    <option disabled>--Click to Select--</option>
+                    <option disabled>A:</option>
+                    <option>David Alderman</option>
+                    <option>Nicole Alderman</option>
+                    <option>Eric Alleckson</option>
+                    <option>Jennifer Alleckson</option>
+                    <option>Mike Amundson</option>
+                    <option>Mary Amundson</option>
+                    <option>Dan Arms</option>
+                    <option>Joy Arms</option>
+                    <option>Dave Atwood</option>
+                    <option>Becky Atwood</option>
+                    <option disabled>B:</option>
+                    <option>Alice Beighley</option>
+                    <option>Chris Beighley</option>
+                    <option>Tricia Beighley</option>
+                    <option>Vianne Berwick</option>
+                    <option>Jean Bouthillier</option>
+                    <option>Nathan Brand (Pastor)</option>
+                    <option>Carrie Brand</option>
+                    <option disabled>C:</option>
+                    <option>Brad Callies</option>
+                    <option>Amanda Callies</option>
+                    <option>Zhade Carlin</option>
+                    <option>Jason Clegg</option>
+                    <option>Colleen Clegg</option>
+                    <option>Anthony Conner</option>
+                    <option>Meridith Crank</option>
+                    <option>Jeff Custer</option>
+                    <option>Jeanne Custer</option>
+                    <option disabled>D:</option>
+                    <option>Alan Domnick</option>
+                    <option>Jen Domnick</option>
+                    <option>John Downer</option>
+                    <option>Naomi Downer</option>
+                    <option disabled>E:</option>
+                    <option>Chris Engel</option>
+                    <option>Beth Engel</option>
+                    <option>Bobby Erickson</option>
+                    <option>Linda Erickson</option>
+                    <option>Sean Evans</option>
+                    <option>Dacia Evans</option>
+                    <option disabled>F:</option>
+                    <option>John Finnan</option>
+                    <option>Jill Finnan</option>
+                    <option>Luke Fisher</option>
+                    <option>Yesenia Fisher</option>
+                    <option>Alex Fleming</option>
+                    <option>Kelsey Fleming</option>
+                    <option>Seth Friedt</option>
+                    <option>Beth Friedt</option>
+                    <option disabled>H:</option>
+                    <option>Heath Hanson</option>
+                    <option>Krista Hanson</option>
+                    <option>Josh Henslin</option>
+                    <option>Katie Henslin</option>
+                    <option>Ken Hershey</option>
+                    <option>Jean Hershey</option>
+                    <option>Todd Hicks</option>
+                    <option>Rachel Hicks</option>
+                    <option>Pete Hill</option>
+                    <option>Jill Hill</option>
+                    <option>Jonathan Holmes</option>
+                    <option>Myrna Holmes</option>
+                    <option>Bryan Holty</option>
+                    <option>Brenda Holty</option>
+                    <option>Sam Hughes</option>
+                    <option>Eric Huhtala</option>
+                    <option disabled>J:</option>
+                    <option>Cliff Johnson</option>
+                    <option>Angie Johnson</option>
+                    <option>Jesse Jones</option>
+                    <option disabled>K:</option>
+                    <option>Mary Kasel</option>
+                    <option>Bruce Keck</option>
+                    <option>Darlene Keck</option>
+                    <option>Jason Kemper</option>
+                    <option>Sarah Kemper</option>
+                    <option>Joshua Kern</option>
+                    <option>Ember Kern</option>
+                    <option>Jim Kluth</option>
+                    <option>Tara Kluth</option>
+                    <option>Tony Knauer</option>
+                    <option>Linda Knauer</option>
+                    <option>Abby Kuhlmann</option>
+                    <option>Joel Kuhlmann</option>
+                    <option>Kathy Kuhlmann</option>
+                    <option>Joe Kuykendall</option>
+                    <option>Heather Kveene</option>
+                    <option disabled>L:</option>
+                    <option>Paul Larson</option>
+                    <option>Lynn Larson</option>
+                    <option>Scott Lemke</option>
+                    <option>Karen Lemke</option>
+                    <option>Justin Long</option>
+                    <option>Jaime Long</option>
+                    <option disabled>M:</option>
+                    <option>Bob Mankaka</option>
+                    <option>Paola Mankaka</option>
+                    <option>Aaron Martin</option>
+                    <option>Katie Martin</option>
+                    <option>Kelly McMillin</option>
+                    <option>Lisa McMillin</option>
+                    <option>David Meyer</option>
+                    <option>Joy Meyer</option>
+                    <option>Mary Mikkalson</option>
+                    <option>Karl Monson</option>
+                    <option>Kady Monson</option>
+                    <option>Jim Murphy</option>
+                    <option disabled>N:</option>
+                    <option>Amber Nelson</option>
+                    <option>Erik Nelson</option>
+                    <option>Erin Nelson</option>
+                    <option>Dale Niedfeldt</option>
+                    <option>Jacki Niedfeldt</option>
+                    <option disabled>O:</option>
+                    <option>Beth Oesterlin</option>
+                    <option disabled>P:</option>
+                    <option>Paul Pigsley</option>
+                    <option>Laura Pigsley</option>
+                    <option>Bill Plantan</option>
+                    <option>Dianna Plantan</option>
+                    <option>Andrew Prideaux</option>
+                    <option>Cara Prideaux</option>
+                    <option disabled>R:</option>
+                    <option>Kelly Reynolds</option>
+                    <option>Kristi Reynolds</option>
+                    <option>John Riebow</option>
+                    <option>Lianne Riebow</option>
+                    <option>Aaron Robb</option>
+                    <option>Kelley Robb</option>
+                    <option>Jim Rogers</option>
+                    <option>Patti Rogers</option>
+                    <option>Karl Rogers</option>
+                    <option>Kristin Rogers</option>
+                    <option>Julie Ryland</option>
+                    <option disabled>S:</option>
+                    <option>Jeff Schmoll</option>
+                    <option>Sara Schmoll</option>
+                    <option>Bob Scott</option>
+                    <option>Mel Scott</option>
+                    <option>Carol Silva</option>
+                    <option>Justin Sokol</option>
+                    <option>Kristina Sokol</option>
+                    <option>Emily Sorensen</option>
+                    <option>Don Stafford</option>
+                    <option>Katie Stafford</option>
+                    <option>Dickie Swanson</option>
+                    <option>Evie Swanson</option>
+                    <option>Polly Swartz</option>
+                    <option disabled>T:</option>
+                    <option>Tom Thacher</option>
+                    <option>Rosie Thacher</option>
+                    <option disabled>U:</option>
+                    <option>Pete Ulbricht</option>
+                    <option>Delores Ulbricht</option>
+                    <option disabled>V:</option>
+                    <option>Aaron Vaneps</option>
+                    <option>Bilki Vaneps</option>
+                    <option disabled>W:</option>
+                    <option>Joel Wager</option>
+                    <option>Faye Wager</option>
+                    <option>Tom Wass</option>
+                    <option>Sharon Wass</option>
+                    <option>Bryan Weiss</option>
+                    <option>Kim Weiss</option>
+                    <option>Kevin Wendzel</option>
+                    <option>Katie Wendzel</option>
+                    <option>Darin White</option>
+                    <option>Laurel White</option>
+                    <option>Lance Wynveen</option>
+                    <option>Val Wynveen</option>
+                    <option disabled>Y:</option>
+                    <option>Bob Young</option>
+                    <option>Dona Young</option>
+                    <option>John Young</option>
+                    <option>Amy Young</option>
+                </select>
+                <select id="worship" style="outline:none;color:#1F1F1F;font-size:20px;background-color:#white;border:none;padding:5px;border-radius:20px;position:absolute;top:40%;width:80%;left:10%;height:60px;">
+                    <option disabled>--Click to Select--</option>
+                    <option>Worship & Service</option>
+                    <option>Worship</option>
+                    <option>Service</option>
+                    <option>Not Sure?</option>
+                </select>
+                <div style="height:16px;width:100%;position:absolute;left:0%;top:58%;">
+                    <div style="background-color:white;width:80%;height:2px;"></div>
+                    <div style="position:relative;top:-28px;background-color:#1F1F1F;height:16px;width:32px;">
+                        <p style="color:white;">OR</p>
+                    </div>
+                </div>
+                <input autofocus id="id" placeholder="Enter your 7-digit ID:" style="outline:none;color:#1F1F1F;font-size:20px;background-color:white;border:none;padding:5px;border-radius:20px;position:absolute;top:63%;width:80%;left:10%;height:50px;"/>
+                <button onclick="checkin()" id="checkinbtn">Check In!</button>
+            </div>
+        </center>
+        <script>
+            document.getElementById("name").value = "--Click to Select--";
+            document.getElementById("worship").value = "--Click to Select--";
+            function checkin(){
+                if(document.getElementById("name").value == "--Click to Select--"){
+                    if(document.getElementById("id").value != ""){
+                        
+                    }
+                    else{
+                        alert("Please select your name or input your ID in");
+                    }
+                }
+                else{
+                    if(document.getElementById("worship").value == "--Click to Select--"){
+                        alert("Please select why you are here");
+                    }
+                    else{
+                        
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
